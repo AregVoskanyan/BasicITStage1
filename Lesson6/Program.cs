@@ -1,33 +1,57 @@
-﻿//void PrintMessage(string message)
-//{
-//    Console.WriteLine(message);
-//}
+﻿using System;
 
-//PrintMessage("Hello wrold");
-//PrintMessage("Hello Areg");
-//PrintMessage("Hello C#");
+namespace Methods
+{
+    class Program
+    {
+        //--- 1 Simple Void Method ---\\
+        public static void SayHello()
+        {
+            Console.WriteLine("Hello World!");
+        }
 
-//void Sum(int x, int y)
-//    {
-//        int result = x + y;
-//        Console.WriteLine($"{x} + {y} = {result}");
-//    }
-//Sum(10, 15);
+        //--- 2 Method With Parametrs ---\\\
+        public static void PrintMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
 
-//static void PrintPerson(string name, int age, string company = "Undefined")
-//{
-//    Console.WriteLine($"Name: {name} Age: {age} Company: {company});
-//}
+        public static void Sum(int x, int y)
+        {
+            int result = x + y;
+            Console.WriteLine($"{x} + {y} = {result}");
+        }
 
-//PrintPerson("Tom", company: "BAsic IT", age: 18);
-//PrintPerson(age: 41, name: "Bob");
-//PrintPerson(company:"Google", name: "Sam");
+        //--- 3 Method With Return Values ---\\\
+        public static string GetMessage()
+        {
+            return "Hello World!";
+        }
 
-//void PrintPerson(string name, int age = 1, string company = "Undefined")
-//{
-//    Console.WriteLine($"Name: {name}  Age: {age}  Company: {company}");
-//}
+        //--- 4 Recursive Functions ---\\
+        public static int Factorial(int n)
+        {
+            if (n == 1) return 1;
 
-//PrintPerson("Tom", company: "Microsoft", age: 37);
-//PrintPerson(age: 41, name: "Bob");
-//PrintPerson(company: "Google", name: "Sam");
+            return n * Factorial(n - 1);
+        }
+
+        static void Main(string[] args)
+        {
+            //--- 1 Simple Void Method ---\\
+            SayHello();
+
+            //--- 2 Method With Parametrs ---\\\
+            PrintMessage("Hello World!");
+            Sum(7, 9);
+
+            //--- 3 Method With Return Values ---\\\
+            string message = GetMessage();
+            Console.WriteLine(message);
+
+            //--- 4 Recursive Functions ---\\
+            int factorial5 = Factorial(5);
+            Console.WriteLine(factorial5);
+        }
+    }
+}

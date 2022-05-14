@@ -19,3 +19,21 @@
 //    }
 //    Console.WriteLine();
 //}
+using System;
+namespace Loops
+{
+    class Prgram
+    {
+        static void Main()
+        {
+            int counter = 0;
+            while (counter < 3)
+            {
+                Console.WriteLine($"BLOCK: counter = {counter}");
+                counter++;
+            }
+
+            Console.WriteLine($"MAIN: counter = {counter}");
+        }
+    }
+}
